@@ -19,8 +19,9 @@
 \contentsline {subsection}{\numberline {2.3}Linearit\IeC {\"a}tsregeln f\IeC {\"u}r die Ableitung}{6}
 \contentsline {subsection}{\numberline {2.4}Produkt- und Quotientenregel f\IeC {\"u}r Ableitungen}{6}
 \contentsline {subsection}{\numberline {2.5}Kettenregel f\IeC {\"u}r Ableitungen}{6}
-\contentsline {subsection}{\numberline {2.6}Linearisierungsformel}{7}
-\contentsline {subsection}{\numberline {2.7}Algorithmus von Newton}{7}
-\contentsline {subsection}{\numberline {2.8}Regel von Bernoulli-l'H\IeC {\^o}pital}{7}
-\contentsline {subsection}{\numberline {2.9}Taylor-Polynom}{8}
-\contentsline {subsection}{\numberline {2.10}Konvergenz von Taylorreihen}{8}
+\contentsline {subsection}{\numberline {2.6}Kurvendiskussion}{7}
+\contentsline {subsection}{\numberline {2.7}Linearisierungsformel}{7}
+\contentsline {subsection}{\numberline {2.8}Algorithmus von Newton}{7}
+\contentsline {subsection}{\numberline {2.9}Regel von Bernoulli-l'H\IeC {\^o}pital}{8}
+\contentsline {subsection}{\numberline {2.10}Taylor-Polynom}{8}
+\contentsline {subsection}{\numberline {2.11}Konvergenz von Taylorreihen}{9}
