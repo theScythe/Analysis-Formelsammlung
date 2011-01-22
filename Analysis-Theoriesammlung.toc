@@ -5,23 +5,22 @@
 \contentsline {subsection}{\numberline {1.4}Gleichungsregel f\IeC {\"u}r das Wegschaffen von Wurzeln}{2}
 \contentsline {subsection}{\numberline {1.5}Monotone Funktionen}{2}
 \contentsline {subsection}{\numberline {1.6}Allgemeine Ungleichungsregel}{3}
-\contentsline {subsection}{\numberline {1.7}Arithmetische Grundoperationen mit Funktionen}{3}
-\contentsline {subsection}{\numberline {1.8}Verkettung oder Komposition}{3}
-\contentsline {subsection}{\numberline {1.9}Graphen der Verkettung von Funktionen mit linearen Funktionen}{4}
-\contentsline {subsection}{\numberline {1.10}Umkehrfunktion}{4}
-\contentsline {subsection}{\numberline {1.11}Graphen von Umkehrfunktionen}{4}
-\contentsline {subsection}{\numberline {1.12}Verkettung einer Funktion mit ihrer Umkehrfunktion}{4}
-\contentsline {subsection}{\numberline {1.13}Eigentliche und Uneigentliche Grenzwerte}{5}
-\contentsline {subsection}{\numberline {1.14}Stetigkeit}{5}
-\contentsline {section}{\numberline {2}Differenzialrechnung}{5}
-\contentsline {subsection}{\numberline {2.1}Ableitung}{5}
+\contentsline {subsection}{\numberline {1.7}Verkettung oder Komposition}{3}
+\contentsline {subsection}{\numberline {1.8}Graphen der Verkettung von Funktionen mit linearen Funktionen}{3}
+\contentsline {subsection}{\numberline {1.9}Umkehrfunktion}{4}
+\contentsline {subsection}{\numberline {1.10}Graphen von Umkehrfunktionen}{4}
+\contentsline {subsection}{\numberline {1.11}Verkettung einer Funktion mit ihrer Umkehrfunktion}{4}
+\contentsline {subsection}{\numberline {1.12}Eigentliche und Uneigentliche Grenzwerte}{4}
+\contentsline {subsection}{\numberline {1.13}Stetigkeit}{4}
+\contentsline {section}{\numberline {2}Differenzialrechnung}{4}
+\contentsline {subsection}{\numberline {2.1}Ableitung}{4}
 \contentsline {subsection}{\numberline {2.2}Wichtige Ableitungsfunktionen}{5}
-\contentsline {subsection}{\numberline {2.3}Linearit\IeC {\"a}tsregeln f\IeC {\"u}r die Ableitung}{6}
+\contentsline {subsection}{\numberline {2.3}Linearit\IeC {\"a}tsregeln f\IeC {\"u}r die Ableitung}{5}
 \contentsline {subsection}{\numberline {2.4}Produkt- und Quotientenregel f\IeC {\"u}r Ableitungen}{6}
 \contentsline {subsection}{\numberline {2.5}Kettenregel f\IeC {\"u}r Ableitungen}{6}
-\contentsline {subsection}{\numberline {2.6}Kurvendiskussion}{7}
+\contentsline {subsection}{\numberline {2.6}Kurvendiskussion}{6}
 \contentsline {subsection}{\numberline {2.7}Linearisierungsformel}{7}
 \contentsline {subsection}{\numberline {2.8}Algorithmus von Newton}{7}
-\contentsline {subsection}{\numberline {2.9}Regel von Bernoulli-l'H\IeC {\^o}pital}{8}
+\contentsline {subsection}{\numberline {2.9}Regel von Bernoulli-l'H\IeC {\^o}pital}{7}
 \contentsline {subsection}{\numberline {2.10}Taylor-Polynom}{8}
-\contentsline {subsection}{\numberline {2.11}Konvergenz von Taylorreihen}{9}
+\contentsline {subsection}{\numberline {2.11}Konvergenz von Taylorreihen}{8}
