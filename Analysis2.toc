@@ -1,0 +1,3 @@
+\contentsline {section}{\numberline {1}Integralrechnung}{2}
+\contentsline {section}{\numberline {2}Fouriertransformation}{2}
+\contentsline {section}{\numberline {3}Differenzialgleichungen}{2}
