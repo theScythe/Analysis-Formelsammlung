@@ -24,11 +24,101 @@
 
 \section{Integralrechnung}
 
-...
+\subsection{Definition des Integrals}
+
+Die Definition des Integrals lautet
+$$\int\limits_a^b f = \lim_{n \mapsto \infty}\left(\sum_{i=1}^n f(x_i) \cdot \Delta x\right)$$
+mit
+$$\Delta x = \frac{b-a}{n}$$
+und
+$$x_i = a + i \cdot \Delta x$$
+
+
+\subsection{Summenformeln}
+
+$$\sum_{i=1}^n i = \frac{n(n+1)}{2}$$
+$$\sum_{i=1}^n i^2 = \frac{n(n+1)(2n+1)}{6}$$
+$$\sum_{i=1}^n i^3 = \left(\frac{n(n+1)}{2}\right)^2$$
+
+
+\subsection{Graphische Interpretation von Integralen}
+
+Wir betrachten das Integral
+$$\int\limits_a^b f$$
+Wir nennen die Fläche, welche horizontal durch zwei Abszissen und vertikal
+durch die Abszissenachse und den Funktionsgraphen begrenzt sind als
+\textit{Fläche unter dem Funktionsgraphen}. Es sind nun zwei Fälle zu unterscheiden:
+
+\begin{itemize}
+\item Wenn $a < b$ ist:\\
+    Dann sind Flächen unter Funktionsgraphen mit positiver Ordinate positiv und
+    solche mit negativen Ordinaten negativ zu zählen.
+\item Wenn $a > b$ ist:\\
+    Dann sind Flächen unter Funktionsgraphen mit positiver
+    Ordinate negativ und solche mit negativen Ordinaten positiv zu zählen.
+\end{itemize}
+
+
+\subsection{Vorzeichenregeln und Additivität}
+
+Falls die beteiligten Integrale existieren, gilt
+\begin{itemize}
+\item Vertauschen der Integralgrenzen ändert das Vorzeichen des Integrals
+$$\int\limits_a^b f = - \int\limits_b^a f$$
+\item Aneinanderstossende Integrale können zusammengefasst werden.
+$$\int\limits_a^b f + \int\limits_b^c f = \int\limits_a^c f$$
+\end{itemize}
+
+
+\subsection{Linearitätsregeln für Integrale}
+
+Seien $f$ und $g$ auf dem intervall $[a;b]$ integrierbare Funktionen und $c$ eine
+Konstante. Dann gelten die beiden Linearitätsgesetze:
+$$\int\limits_a^b (f + g) = \left(\int\limits_a^b f\right) + 
+    \left(\int\limits_a^b g\right)$$
+$$\int\limits_a^b (c \cdot f) = c \int\limits_a^b f$$
+
+
+\subsection{Simpson-Regel}
+
+Sei $f$ eine auf $[a;b]$ viermal differenzierbare Funktion und $n$ eine gerade Zahl.
+Ferner sei
+$$x_i = a + i \cdot \Delta x \textrm{ mit } \Delta x = \frac{b-a}{n}
+    \textrm{ und } y_i = f(x_i)$$
+Dann ist
+$$S_n = \frac{\Delta x}{3}(y_0 + 4y_1 + 2y_2 + 4y_3 + 2y_4 + ... + 4y_{n-1} + y_n)$$
+$$= \frac{\Delta x}{3}\left(y_0 + y_n + 4 \sum_{k=1}^{n/2} y_{2k-1} 
+    + 2 \sum_{k=1}^{n/2-1} y_{2k}\right)$$
+eine Schätzung für das Integral $\int\limits_a^b f$, wobei der Fehler
+$$E_n = \left(\int\limits_a^b f\right) - S_n = \frac{b-a}{180}\Delta x^4 f^{(4)}(\xi)
+    = \frac{(b-a)^5}{180n^4} f^{(4)}(\xi)$$
+$$\textrm{für ein } \xi \in [a;b]$$
+beträgt.
+
+
+\subsection{Integralfunktion}
+
+Gegeben sei eine auf dem Intervall $[a;b]$ integrierbare Funktion $f$. Dann heisst
+jede Funktion der Form
+$$x \mapsto \int\limits_c^x f$$
+für eine Konstante $c \in [a;b]$ eine \textit{Integralfunktion} von $f$.
+
+
+\subsection{Zusammenhang verschiedener Integralfunktionen}
+
+Verschiedene Integralfunktionen derselben Funktion unterscheiden sich nur durch
+eine Konstante. Wenn also
+$$\Phi_c := x \mapsto \int\limits_c^x f \textrm{ und } \Phi_d := x \mapsto
+    \int\limits_d^x f$$
+dann gilt
+$$\Phi_d = \Phi_c + k \textrm{ wobei } k \textrm{ konstant}$$
+
+
 
 \section{Fouriertransformation}
 
 ...
+
 
 \section{Differenzialgleichungen}
 
