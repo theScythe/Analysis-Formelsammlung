@@ -222,7 +222,7 @@ $$\varphi = \begin{cases}
 -\pi/2 & \mathrm{f\ddot ur}\ x = 0,\ y < 0\\
 \end{cases}$$
 
-Oder alternativ mithilfe des Arkuskosinus:
+Falls man den Radius $r$ bzw. $A$ schon weiss, kann man auch den Arkuskosinus verwenden:
 $$\varphi = \begin{cases}
 +\arccos\frac{x}{r} & \mathrm{f\ddot ur}\ y\geq 0\\
 -\arccos\frac{x}{r} & \mathrm{f\ddot ur}\ y<0
@@ -287,6 +287,60 @@ Fourierentwicklung sind
 $$\tilde{a_0} = c \cdot a_0$$
 $$\tilde{a_k} = c \cdot a_k$$
 $$\tilde{b_x} = c \cdot b_k$$
+
+
+\subsection{Spiegelung des Signalgraphen an der Ordinatenachse (Zeitumkehr)}
+
+Das Signal $s$ sei periodisch mit der Periode $T$ und seine Fourierreihe sei
+$$f:= t \mapsto a_0 + \sum_{k=1}^{\infty} \left[a_k\cos(k\omega_1t) + b_k\sin(k\omega_1t)\right]$$
+$$= t \mapsto A_0 + \sum_{k=1}^{\infty} A_k \cos(k\omega_1t - \phi_k) \textrm{ mit } \omega_1 = \frac{2\pi}{T}$$
+Dann hat das Signal
+$$\tilde{s} := t \mapsto s(-t)$$
+die Fourierreihe
+$$\tilde{f} = t \mapsto a_0 + \sum_{k=1}^{\infty} \left[a_k \cos(k\omega_1t) - b_k\sin(k\omega_1t)\right]$$
+$$= t \mapsto A_0 + \sum_{k=1}^{\infty} A_k\cos(k\omega_1t + \phi_k)$$
+\textbf{Merke:} Durch die Spiegelung an der Ordinatenachse ändern die Koeffizienten der Sinusglieder
+und die Phasen das Vorzeichen, während alle anderen Bestimmungstücke unverändert bleiben.
+
+
+\subsection{Zeitskalierung}
+
+Das Signal $s$ sei periodisch mit der Periode $T$ und seine Fourierreihe sei
+$$f:= t \mapsto a_0 + \sum_{k=1}^{\infty} \left[a_k\cos(k\omega_1t) + b_k\sin(k\omega_1t)\right]$$
+$$= t \mapsto A_0 + \sum_{k=1}^{\infty} A_k \cos(k\omega_1t - \phi_k) \textrm{ mit } \omega_1 = \frac{2\pi}{T}$$
+Dann hat das Signal
+$$\tilde{s} := t \mapsto s(ct) \textrm{ für } c > 0$$
+die Fourierreihe
+$$\tilde{f} = t \mapsto a_0 + \sum_{k=1}^{\infty} \left[a_k \cos(k\omega_2t) + b_k\sin(k\omega_2t)\right]$$
+$$= t \mapsto A_0 + \sum_{k=1}^{\infty} A_k\cos(k\omega_2t - \phi_k)$$
+wobei
+$$\omega_2 = c\omega_1$$
+ist.\\\\
+\textbf{Merke:} Durch die zeitliche Skalierung ändert einzige die Grundkreisfrequenz,
+während die Fourierkoeffizienten, die Amplituden und die Phasen unverändert bleiben.
+
+
+\subsection{Zeitverschiebung}
+
+Das Signal $s$ sei periodisch mit der Periode $T$ und seine Fourierreihe sei
+$$f:= t \mapsto a_0 + \sum_{k=1}^{\infty} \left[a_k\cos(k\omega_1t) + b_k\sin(k\omega_1t)\right]$$
+$$= t \mapsto A_0 + \sum_{k=1}^{\infty} A_k \cos(k\omega_1t - \phi_k) \textrm{ mit } \omega_1 = \frac{2\pi}{T}$$
+Dann hat das Signal
+$$\tilde{s} := t \mapsto s(t-\tau)$$
+die Fourierreihe
+$$t \mapsto \widetilde{a_0} + \sum_{k=1}^{\infty} \left[\widetilde{a_k} \cos(k\omega_1t) + \widetilde{b_k}\sin(k\omega_1t)\right]$$
+$$= t \mapsto \widetilde{A_0} + \sum_{k=1}^{\infty} \widetilde{A_k}\cos(k\omega_1t - \widetilde{\phi_k})$$
+mit
+$$\widetilde{a_0} = a_0$$
+$$\widetilde{a_k} = a_k\cos(k\gamma) - b_k\sin(k\gamma)$$
+$$\widetilde{b_k} = a_k\sin(k\gamma) + b_k\cos(k\gamma)$$
+$$\widetilde{A_k} = A_k$$
+$$\widetilde{\phi_k} = \phi_k + k\gamma$$
+wobei
+$$\gamma = \frac{\tau}{T} \times 2\pi$$
+ist.\\\\
+\textbf{Merke:} Bei einer zeitlichen Verzögerung des Signals ändern nur die Phasen,
+während die Konstante und die Amplituden gleich bleiben.
 
 \vspace{120mm}
 Stand Dokument: Bis und mit Kapitel 4.2.3
