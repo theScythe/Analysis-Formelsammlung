@@ -91,6 +91,14 @@ $$\int\limits_a^b f = \left[\frac{f(a) + f(b)}{2} + \sum_{i=1}^{n-1} f(x_i)\righ
 mit
 $$\Delta x = \frac{b-a}{n} \textrm{ und } x_i = a + i \cdot \Delta x$$
 
+\subsubsection{Fassregegel}
+
+Bei der Fassregel wird die zu integrierende Funktion $\int_a^b$ mit einer quadratischen
+Funktion, die durch die Punkte $a$, $b$ und $\frac{b-a}{2}$ geht, approximiert.
+$$\int\limits_a^b f \approx \int\limits_a^b q = \frac{y_a + 4y_m + y_b}{3} \Delta x$$
+wobei
+$$y_a = f(a) \textrm{, } y_m = f\left(\frac{a+b}{2}\right) \textrm{, } y_b = f(b) \textrm{, } \Delta x = \frac{b-a}{2}$$
+
 \subsubsection{Simpson-Regel}
 
 Sei $f$ eine auf $[a;b]$ viermal differenzierbare Funktion und $n$ eine gerade Zahl.
