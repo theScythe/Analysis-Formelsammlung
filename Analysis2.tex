@@ -126,38 +126,75 @@ dann gilt
 $$\varphi_d = \varphi_c + k \textrm{ wobei } k \textrm{ konstant}$$
 
 
+\subsection{Hauptsatz der Infinitesimalrechnung}
+
+Die eitungsfunktion einer Integralfunktion einer stetigen Funktion ist
+gleich der integrierten Funktion.
+$$\left(x \mapsto \int\limits_a^x f\right)' = f$$
+
+
+\subsection{Stammfunktion}
+
+Sei $f$ eine reelle Funktion. wenn es eine Funktion $F$ gibt, so dass $f$
+ihre Ableitungsfunktion ist, also
+$$F' = f$$
+gilt, dann heisst $F$ eine \textit{Stammfunktion} von $f$.
+
+
+\subsection{Unbestimmtes Integral}
+
+Die Menge aller Stammfunktionen einer Funktion $f$ nennt man ihr \textit{unbestimmtes Integral} und bezeichnet es mit
+$$\int f \textrm{ (ohne Grenzen)}$$
+Auch von Termen gibt es das unbestimmte Integral. Wenn etwa $T$ ein Term und $x$ eine Variable ist, schreibt man
+$$\int Tdx$$
+
+
+\subsection{Integralfunktion - Stammfunktion}
+
+Jede Integralfunktion einer stetigen Funktion ist eine Stammfunktion von ihr.
+
+
+\subsection{Berechnung von Integralen mit Hilfe von Stammfunktionen}
+
+Sei $f$ eine auf den Intervall $[a;b]$ \textbf{stetige} Funktion und $F$ eine Stammfunktion von ihr. Dann gilt
+$$\int\limits_a^b f = F(b) - F(a)$$
+
+\textbf{Merke:} Die Funktion $x \mapsto \ln(|x|)$ ist eine Stammfunktion der Reziprokfunktion.
+
+
+\subsection{Linearitätsregeln von Integralen}
+
+Seien $f$ und $g$ Funktionen und $c$ eine Konstante. Dann gelten folgende Linearitätsregeln:
+$$\int (f+g) = \int f + \int g$$
+$$\int cf = c \int f$$
+
+
+\subsection{Integrale von Verkettungen mit linearen Funktionen}
+Sei $f$ eine integrierbare Funktion und $F$ eine Stammfunktion von ihr. Dann gilt
+$$\int f(ax+b)dx = \frac{F(ax+b)}{a} + c$$
+wobei $c$ eine beliebige Konstante ist.
+
+
+\subsection{Integral des Produktes mit der eigenen Ableitung} 
+Eine Stammfunktion des Produktes einer Funktion mit ihrer eigenen
+Ableitungsfunktion ist gleich dem halben Quadrat dieser Funktion.
+
+Beispiel:
+$$\int \sin(x) \cos(x) dx = \frac{\sin(x)^2}{2} + c$$
+
+
+\subsection{Fläche zwischen Funktionsgraphen} 
+
+$f$ und $g$ seien Funktionen, die im Intervall $[a;b]$ stetig sind. Dann ist
+die Fläche, welche oben und unten durch die Graphen der Funktionen $f$ und $g$,
+sowie links und rechts durch die Abszissen $a$ respektive $b$ begrenzt wird, durch
+$$\int\limits_a^b |f(x) - g(x)| dx$$
+gegeben.
+
+
+
 
 \section{Fouriertransformation}
-
-
-\subsection{Lineares System}
-
-Ein System $S$ heisst linear, wenn zwei Bedingungen erfüllt sind:
-\begin{itemize}
-\item Die Antwort einer Summe von Signalen ist gleich der Summe der
-Antworten auf die Summanden. Wenn also $x1$ und $x2$ Signale sind, so gilt
-$$S(x_1 + x_2) = S(x_1) + S(x_2)$$
-\item Die Antwort auf ein mit einer Konstanten multipliziertes
-(verstärktes) Signal ist das Produkt dieser Konstante mit der Antwort
-des Signals. Wenn also $x$ ein Signal und $c$ eine Konstante ist, dann gilt
-$$S(cx) = cS(x)$$
-\end{itemize}
-
-
-\subsection{Zeitinvarianz}
-
-Sei $S$ ein System, $x$ ein beliebiges Eingangssignal und
-$$\tilde{x} = t \mapsto x(t - \tau)$$
-das um $\tau$ verzögerte Eingangssignal. Dann ist die Antwort auf das verzögerte
-Eingangssignal
-$$\tilde{y} = S(\tilde{x})$$
-Ferner sei
-$$y = S(x)$$
-die Antwort des Systems auf das Eingangssignal und
-$$\hat{y} := t \mapsto y(t-\tau)$$
-die verzögerte Antwort auf das Eingangssignal.
-Nun heisst $S$ \textit{zeitinvariant}, wenn
-$$\tilde{y} = \hat{y}$$
 
 
 \subsection{Linearkombinationen gleichperiodischer Funktionen}
@@ -342,12 +379,180 @@ ist.\\\\
 \textbf{Merke:} Bei einer zeitlichen Verzögerung des Signals ändern nur die Phasen,
 während die Konstante und die Amplituden gleich bleiben.
 
-\vspace{120mm}
-Stand Dokument: Bis und mit Kapitel 4.2.3
+
+\subsection{Fourierintegral}
+
+$s$ sei ein Signal, welches absolut integrierbar ist, das heisst, für welches das Integral
+$$\int\limits_{-\infty}^{\infty} |s(t)|dt$$
+existiert. Dann existieren auch die beiden Integrale
+$$a(\omega) = \frac{1}{\pi} \int\limits_{-\infty}^{\infty} s(t) \cos(\omega t)dt$$
+$$b(\omega) = \frac{1}{\pi} \int\limits_{-\infty}^{\infty} s(t) \sin(\omega t)dt$$
+Die Funktion
+$$f := t \mapsto \int\limits_0^{\infty} \left[ a(\omega) \cos(\omega t) + b(\omega) \sin(\omega t)\right]dw$$
+$$=t \mapsto \int\limits_0^{\infty} \left[A(\omega) \cos(\omega t - \phi (\omega))\right]dw$$
+heisst die \textit{Fouriertransformierte} oder das \textit{Fourierintegral} von $s$.
+Die erste Form heisst \textit{Sinus-Kosinus-Form}, die zweite \textit{Spektralform}
+oder \textit{Amplituden-Phasen-Form}. Wenn $(a(\omega), b(\omega))$ die kartesischen
+Koordinaten eine Punktes in der Ebene sind, dann sind $(A(\omega), \phi(\omega))$
+die Polarkoordinaten dieses Punktes.
 
 
-\section{Differentialgleichungen}
+\subsection{Satz von Dirichlet}
 
-...
+Mit den Bezeichnungen der obigen Definition gilt:
+\begin{itemize}
+\item Wenn $s$ an der Stelle $t$ stetig ist, so ist $f(t) = s(t)$
+\item Wenn nicht, so ist $\displaystyle f(t) = \frac{1}{2} \left(\lim_{\tau \mapsto t-}(s(\tau)) + \lim_{\tau \mapsto t+}(s(\tau))\right)$
+\end{itemize}
+
+
+
+
+\section{Differenzialgleichungen}
+
+\subsection{Die Differenzialgleichung}
+
+Eine Gleichung zwischen einer Funktion und ihren Ableitungsfunktionen heisst \textit{Differenzialgleichung}.
+Die höchste vorkommende Ableitung heisst die \textit{Ordnung} der Differenzialgleichung. Eine
+Differenzialgleichung hat in der Regel unendlich viele Lösungen. Die Lösungsmenge nennt man aus
+historischen Gründen auch die \textit{allgemeine Lösung} und eine einzelne Lösung eine \textit{spezielle Lösung}.
+Zusätzliche Bedingungen, welche dazu dienen, aus der allgemeinen Lösung eine spezielle auszusondern,
+heissen \textit{Randbedingungen} oder \textit{Anfangsbedingungen} (wenn das Argument die Zeit darstellt).
+Eine Differenzialgleichung mit Randbedingungen wird auch als \textit{Randwertproblem} oder \textit{Anfangswertproblem}
+bezeichnet.\\\\
+\textbf{Merke:} Angewandte Probleme, bei denen eine ganze Funktion gesucht ist, führen auf Differenzialgleichungen.
+
+
+\subsection{Explizite Differenzialgleichung}
+
+Eine Differenzialgleichung, in der die höchste Ableitung isoliert auf einer Seite des
+Gleichheitszeichens steht, heisst \textit{explizit}. Eine explizite Differenzialgleichung
+für die Funktion $f$ hat also die Gestalt
+$$f^{(n)}(x) = G\left(x,f(x),f'(x),\dots,f^{(n-1)}(x)\right)$$
+im Spezialfall einer Differenzialgleichung 1. Ordnung somit
+$$f'(x) = G(x,f(x))$$
+In diesem Fall ist die rechte Seite ist also nur vom Argument $x$ und vom Wert $fx$ der
+gesuchten Funktion abhängig; die Ableitung hingegen kommt rechts nicht vor.
+
+
+\subsection{Methode von Euler}
+
+Gegeben sei eine explizite Differenzialgleichung 1. Ordnung für die Funktion $f$
+$$f'(x) = G(x,f(x))$$
+und ein Punkt $P_n = (x_n,y_n)$ des Graphen einer speziellen Lösung.\\\\
+Der Punkt $P_{n+1} = (x_{n+1}, y_{n+1})$ wird wie folgt bestimmt:\\
+Man wählt ein $\Delta{x}$ mit kleinem Betrag und berechnet
+$$x_{n+1} = x_n + \Delta x$$
+$$y_{n+1} = y_n + s_n\Delta x$$
+mit
+$$s_n = G(x_n,y_n)$$
+
+
+\subsection{Verfahren von Runge-Kutta}
+
+Gegeben sei eine explizite Differenzialgleichung 1. Ordnung für die Funktion $f$
+$$f'(x) = F(x, f(x))$$
+und ein Punkt $P_n = (x_n, y_n)$ des Graphen einer speziellen Lösung.\\\\
+Der Punkt $P_{n+1} = (x_{n+1},y_{n+1})$ wird wie folgt bestimmt:\\
+Man wählt ein $\Delta{x}$ mit kleinem Betrag. Die Abszisse von $P_{n+1}$ ist
+$$x_{n+1} = x_n + \Delta x$$
+Die Ordinate ist
+$$y_{n+1} = y_n + s\Delta x$$
+mit
+$$s = \frac{s_1 + 2s_2 + 2s_3 + s_4}{6}$$
+wobei
+\begin{enumerate}
+\item $\displaystyle s_1 = F(x_n, y_n)$
+\item $\displaystyle s_2 = F\left(x_n + \frac{\Delta{x}}{2}, y_n + s_1 \frac{\Delta x}{2}\right)$
+\item $\displaystyle s_3 = F\left(x_n + \frac{\Delta{x}}{2}, y_n + s_2 \frac{\Delta x}{2}\right)$
+\item $\displaystyle s_4 = F(x_n+\Delta x, y_n+s_3\Delta x)$
+\end{enumerate}
+
+
+\subsection{Separierbare Differenzialgleichung}
+
+Eine Differenzialgleichung für die Funktion $f$ heisst
+\textit{separierbar}, wenn sie auf die Form
+$$f'(x) = \frac{g(x)}{h(f(x))}$$
+gebracht werden kann.
+
+
+\subsection{Lineare Differenzialgleichung}
+
+Eine Differenzialgleichung für die Funktion $f$ der Form
+$$a_0 f(x) + a_1 f'(x) + a_2 f''(x) + \dots + a_n f^{(n)}(x) = s(x)$$
+oder
+$$\sum\limits_{k=0}^n a_k f^{(k)}(x) = s(x)$$
+wobei die $a_k$ gegebene Konstanten und $s$ eine vorgegebene
+Funktion ist, heisst \textit{lineare Differenzialgleichung}
+mit konstanten Koeffizienten. Die $a_k$ heissen die
+\textit{Koeffizienten}, $s$ die \textit{Störfunktion}.\\\\
+Wenn die Störfunktion die Nullfunktion ist, heisst die
+Differenzialgleichung \textit{homogen}, andernfalls
+\textit{inhomogen}.
+
+
+\subsection{Linearität der Lösungen homogener lineare Differenzialgleichungen}
+
+\begin{enumerate}
+\item Wenn $f_1$ und $f_2$ Lösungen einer homogenen linearen
+Differenzialgleichung sind, so ist auch ihre Summe $f_1 + f_2$
+eine Lösung.
+\item Ist ferner $f$ eine Lösung und $c$ eine Konstante,
+so ist auch das Produkt $c \cdot f$ eine Lösung.
+\end{enumerate}
+Man kann die beiden Gesetze auch so zusammenfassen:\\\\
+Wenn $f_1$ und $f_2$ Lösungen einer homogenen linearen
+Differenzialgleichung sind, so ist auch jede
+Linearkombination $c_1f_1 + c_2f_2$, wobei $c_1$ und
+$c_2$ Konstanten sind, eine Lösung.
+
+
+\subsection{Allgemeine Lösung der homogene Lineare Differenzialgleichung zweiter Ordnung}
+
+Gegeben sei die homogene lineare Differenzialgleichung
+$$c_2f''(x) + c_1f'(x) + c_0f(x) = 0$$
+Um sie zu lösen, formuliert man zuerst ihre \textit{charakteristische Gleichung}.
+$$c_2s^2 + c_1s + c_0 = 0$$
+Nun sind drei Fälle zu unterscheiden:
+
+\begin{itemize}
+
+\item Wenn die charakteristische Gleichung \textbf{zwei verschiedene} Lösungen
+$s_1$ und $s_2$ besitzt (die Diskriminante also positiv ist), so lautet die
+allgemeine Lösung der Differenzialgleichung
+$$f := x \mapsto Ae^s1^x + Be^s2^x$$
+mit frei wählbaren Konstanten $A$ und $B$.
+
+\item Wenn die charakteristische Gleichung \textbf{nur eine} Lösung $s_1$ besitzt
+(die Diskriminante also Null ist), so lautet die allgemeine Lösung der Differenzialgleichung
+$$f := x \mapsto (Ax + B)e^s1^x$$
+mit frei wählbaren Konstanten $A$ und $B$.
+
+\item Wenn die charakteristische Gleichung keine Lösung hat (die Diskriminante
+also negativ ist) so lautet die allgemeine Lösung der Differenzialgleichung
+$$f := x \mapsto e^{rx}\left(A \cos(\omega x) + B \sin(\omega x)\right)$$
+mit frei wählbarem $A$ und $B$, respektive in der Amplituden-Phasen-Form
+$$f := x \mapsto Ce^{rx} \cos(\omega x - \phi)$$
+mit frei wählbarem $C$ und $\phi$.
+
+Um die Parameter $r$ und $\omega$ zu bestimmen, bringt man die rechte Seite der
+Lösungsformel für die charakteristische Gleichung auf die Form
+$$s = a \pm \sqrt{b}$$
+Dann ist
+$$r = a \textrm{ und } \omega = \sqrt{-b}$$
+\end{itemize}
+
+
+\subsection{Inhomogene lineare Differenzialgleichungen}
+
+Die allgemeine Lösung einer inhomogenen linearen Differenzialgleichung für $f$
+$$\sum_{k=0}^n a_k f^{(k)}(x) = s(x)$$
+ist die Summe einer partikulären Lösung und der allgemeinen Lösungen
+der zugehörigen homogenen Gleichung
+$$\sum_{k=0}^n a_k f^{(k)}(x) = 0$$
+
+
+
 
 \end{document}
