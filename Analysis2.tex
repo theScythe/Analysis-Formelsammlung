@@ -72,15 +72,6 @@ $$\int\limits_a^b f + \int\limits_b^c f = \int\limits_a^c f$$
 \end{itemize}
 
 
-\subsection{Linearitätsregeln für Integrale}
-
-Seien $f$ und $g$ auf dem intervall $[a;b]$ integrierbare Funktionen und $c$ eine
-Konstante. Dann gelten die beiden Linearitätsgesetze:
-$$\int\limits_a^b (f + g) = \left(\int\limits_a^b f\right) + 
-    \left(\int\limits_a^b g\right)$$
-$$\int\limits_a^b (c \cdot f) = c \int\limits_a^b f$$
-
-
 \subsection{Numerische Berechnung von Integralen}
 
 \subsubsection{Trapezregel}
@@ -91,7 +82,7 @@ $$\int\limits_a^b f = \left[\frac{f(a) + f(b)}{2} + \sum_{i=1}^{n-1} f(x_i)\righ
 mit
 $$\Delta x = \frac{b-a}{n} \textrm{ und } x_i = a + i \cdot \Delta x$$
 
-\subsubsection{Fassregegel}
+\subsubsection{Fassregel}
 
 Bei der Fassregel wird die zu integrierende Funktion $\int_a^b$ mit einer quadratischen
 Funktion, die durch die Punkte $a$, $b$ und $\frac{b-a}{2}$ geht, approximiert.
@@ -165,9 +156,7 @@ Jede Integralfunktion einer stetigen Funktion ist eine Stammfunktion von ihr.
 \subsection{Berechnung von Integralen mit Hilfe von Stammfunktionen}
 
 Sei $f$ eine auf den Intervall $[a;b]$ \textbf{stetige} Funktion und $F$ eine Stammfunktion von ihr. Dann gilt
-$$\int\limits_a^b f = F(b) - F(a)$$
-
-\textbf{Merke:} Die Funktion $x \mapsto \ln(|x|)$ ist eine Stammfunktion der Reziprokfunktion.
+$$\int\limits_a^b f = F\mid_a^b = F(b) - F(a)$$
 
 
 \subsection{Linearitätsregeln von Integralen}
