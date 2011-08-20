@@ -11,6 +11,8 @@
 \usepackage{float} % Use H placement specifier for floats
 \usepackage{longtable} % Tables across several pages
 \usepackage{hyperref} % Hyperlinks
+% TODO \usepackage[intlimits]{amsmath} % Always use big integration limits
+% TODO or don't use limits for integrals at all
 \author{Danilo Bargen}
 \title{Theoriesammlung Analysis 2}
 
@@ -172,10 +174,13 @@ Jede Integralfunktion einer stetigen Funktion ist eine Stammfunktion von ihr.
 
 Sei $f$ eine auf den Intervall $[a;b]$ \textbf{stetige} Funktion und $F$ eine
 Stammfunktion von ihr. Dann gilt
-$$\int\limits_a^b f = F\mid_a^b = F(b) - F(a)$$
+$$\int\limits_a^b f = F\Big |_a^b = F(b) - F(a)$$
 
 
-\subsection{Linearitätsregeln von Integralen}
+\subsection{Integrationsregeln}
+
+
+\subsubsection{Linearitätsregel}
 
 Seien $f$ und $g$ Funktionen und $c$ eine Konstante. Dann gelten folgende
 Linearitätsregeln:
@@ -183,19 +188,37 @@ $$\int (f+g) = \int f + \int g$$
 $$\int cf = c \int f$$
 
 
-\subsection{Integrale von Verkettungen mit linearen Funktionen}
+\subsubsection{Integrale von Verkettungen mit linearen Funktionen}
+
 Sei $f$ eine integrierbare Funktion und $F$ eine Stammfunktion von ihr. Dann
 gilt
 $$\int f(ax+b)dx = \frac{F(ax+b)}{a} + c$$
 wobei $c$ eine beliebige Konstante ist.
 
 
-\subsection{Integral des Produktes mit der eigenen Ableitung} 
+\subsubsection{Produktregel}
+
+$$\int\limits_a^b f(x) \cdot g'(x) dx = (f(x) \cdot g(x))\Big |_a^b
+    - \int f'(x) \cdot g(x) dx$$
+
+
+\subsubsection{Produkt mit der eigenen Ableitung} 
+
 Eine Stammfunktion des Produktes einer Funktion mit ihrer eigenen
 Ableitungsfunktion ist gleich dem halben Quadrat dieser Funktion.
 
 Beispiel:
 $$\int \sin(x) \cos(x) dx = \frac{\sin(x)^2}{2} + c$$
+
+
+\subsubsection{Quotientenregel}
+
+$$\int\limits_a^b \frac{f'(x)}{f(x)} dx = \ln(|f(x)|)\Big |_a^b$$
+
+
+\subsubsection{Substitutionsregel}
+
+$$\int\limits_a^b f(g(x)) \cdot g'(x) dx = \int\limits_{g(a)}^{g(b)} f(u) du$$
 
 
 \subsection{Fläche zwischen Funktionsgraphen} 
