@@ -8,6 +8,7 @@
 \usepackage{amssymb}
 \usepackage{parskip} % Skip indentation of first row
 \usepackage{graphicx} % Graphics support
+\usepackage{float} % Use H placement specifier for floats
 \usepackage{longtable} % Tables across several pages
 \usepackage{hyperref} % Hyperlinks
 \author{Danilo Bargen}
@@ -228,9 +229,9 @@ Die Bestimmungsstücke der Amplituden-Phasen-Form können nicht direkt
 berechnet werden, sondern auf dem Umweg über die Koeffizienten
 der Sinus-Kosinus-Form. Dabei gilt folgender Zusammenhang:
 \begin{itemize}
-\item $A_0 = a_0$
-\item Ein Punkt in der Ebene, der die kartesischen Koordinaten $(a_k, b_k)$
-hat, hat die Polarkoordinaten $(A_k, \varphi_k)$
+    \item $A_0 = a_0$
+    \item Ein Punkt in der Ebene, der die kartesischen Koordinaten $(a_k, b_k)$
+    hat, hat die Polarkoordinaten $(A_k, \varphi_k)$
 \end{itemize}
 
 
@@ -239,12 +240,19 @@ hat, hat die Polarkoordinaten $(A_k, \varphi_k)$
 Koordinaten aus dem Kartesischen- oder Polarkoordinatensystem können
 folgendermassen transformiert werden:
 
-\begin{center}
-\includegraphics[scale=0.5]{img/Koordinatentransformation.png}
-\end{center}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{img/Koordinatentransformation.png}
+    \caption{Zusammenhänge Kartesische Koordinaten / Polarkoordinaten}
+\end{figure}
 
-Der Radius $r$ aus dem Polarkoordinatensystem entspricht dabei $A$ in der
-Spektralform einer Fourierentwicklung.
+Übertragen auf die Fourierreihen entspricht in der Grafik:
+\begin{itemize}
+    \item $a_k$ = $x$ (Sinus-Kosinus-Form)
+    \item $b_k$ = $y$ (Sinus-Kosinus-Form)
+    \item $A_k$ = $r$ (Spektralform)
+    \item $\phi_k$ = $\phi$ (Spektralform)
+\end{itemize}
 
 Um den Winkel $\varphi$ im Interval $(-\pi, \pi]$ zu berechnen, gibt es mehrere
 Möglichkeiten. Mithilfe des Arkustangens:
@@ -435,14 +443,14 @@ gesuchten Funktion abhängig; die Ableitung hingegen kommt rechts nicht vor.
 \subsection{Methode von Euler}
 
 Gegeben sei eine explizite Differenzialgleichung 1. Ordnung für die Funktion $f$
-$$f'(x) = G(x,f(x))$$
+$$f'(x) = F(x, y) = F(x,f(x))$$
 und ein Punkt $P_n = (x_n,y_n)$ des Graphen einer speziellen Lösung.\\\\
 Der Punkt $P_{n+1} = (x_{n+1}, y_{n+1})$ wird wie folgt bestimmt:\\
 Man wählt ein $\Delta{x}$ mit kleinem Betrag und berechnet
 $$x_{n+1} = x_n + \Delta x$$
 $$y_{n+1} = y_n + s_n\Delta x$$
 mit
-$$s_n = G(x_n,y_n)$$
+$$s_n = F(x_n,y_n)$$
 
 
 \subsection{Verfahren von Runge-Kutta}
