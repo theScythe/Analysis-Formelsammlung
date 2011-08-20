@@ -428,7 +428,7 @@ bezeichnet.\\\\
 \textbf{Merke:} Angewandte Probleme, bei denen eine ganze Funktion gesucht ist, führen auf Differenzialgleichungen.
 
 
-\subsection{Explizite Differenzialgleichung}
+\subsubsection{Explizite Differenzialgleichungen}
 
 Eine Differenzialgleichung, in der die höchste Ableitung isoliert auf einer Seite des
 Gleichheitszeichens steht, heisst \textit{explizit}. Eine explizite Differenzialgleichung
@@ -440,41 +440,7 @@ In diesem Fall ist die rechte Seite ist also nur vom Argument $x$ und vom Wert $
 gesuchten Funktion abhängig; die Ableitung hingegen kommt rechts nicht vor.
 
 
-\subsection{Methode von Euler}
-
-Gegeben sei eine explizite Differenzialgleichung 1. Ordnung für die Funktion $f$
-$$f'(x) = F(x, y) = F(x,f(x))$$
-und ein Punkt $P_n = (x_n,y_n)$ des Graphen einer speziellen Lösung.\\\\
-Der Punkt $P_{n+1} = (x_{n+1}, y_{n+1})$ wird wie folgt bestimmt:\\
-Man wählt ein $\Delta{x}$ mit kleinem Betrag und berechnet
-$$x_{n+1} = x_n + \Delta x$$
-$$y_{n+1} = y_n + s_n\Delta x$$
-mit
-$$s_n = F(x_n,y_n)$$
-
-
-\subsection{Verfahren von Runge-Kutta}
-
-Gegeben sei eine explizite Differenzialgleichung 1. Ordnung für die Funktion $f$
-$$f'(x) = F(x, f(x))$$
-und ein Punkt $P_n = (x_n, y_n)$ des Graphen einer speziellen Lösung.\\\\
-Der Punkt $P_{n+1} = (x_{n+1},y_{n+1})$ wird wie folgt bestimmt:\\
-Man wählt ein $\Delta{x}$ mit kleinem Betrag. Die Abszisse von $P_{n+1}$ ist
-$$x_{n+1} = x_n + \Delta x$$
-Die Ordinate ist
-$$y_{n+1} = y_n + s\Delta x$$
-mit
-$$s = \frac{s_1 + 2s_2 + 2s_3 + s_4}{6}$$
-wobei
-\begin{enumerate}
-\item $\displaystyle s_1 = F(x_n, y_n)$
-\item $\displaystyle s_2 = F\left(x_n + \frac{\Delta{x}}{2}, y_n + s_1 \frac{\Delta x}{2}\right)$
-\item $\displaystyle s_3 = F\left(x_n + \frac{\Delta{x}}{2}, y_n + s_2 \frac{\Delta x}{2}\right)$
-\item $\displaystyle s_4 = F(x_n+\Delta x, y_n+s_3\Delta x)$
-\end{enumerate}
-
-
-\subsection{Separierbare Differenzialgleichung}
+\subsubsection{Separierbare Differenzialgleichung}
 
 Eine Differenzialgleichung für die Funktion $f$ heisst
 \textit{separierbar}, wenn sie auf die Form
@@ -482,7 +448,7 @@ $$f'(x) = \frac{g(x)}{h(f(x))}$$
 gebracht werden kann.
 
 
-\subsection{Lineare Differenzialgleichung}
+\subsubsection{Lineare Differenzialgleichung}
 
 Eine Differenzialgleichung für die Funktion $f$ der Form
 $$a_0 f(x) + a_1 f'(x) + a_2 f''(x) + \dots + a_n f^{(n)}(x) = s(x)$$
@@ -495,6 +461,40 @@ mit konstanten Koeffizienten. Die $a_k$ heissen die
 Wenn die Störfunktion die Nullfunktion ist, heisst die
 Differenzialgleichung \textit{homogen}, andernfalls
 \textit{inhomogen}.
+
+
+\subsection{Methode von Euler}
+
+Gegeben sei eine explizite Differenzialgleichung 1. Ordnung für die Funktion $f$
+$$f'(x) = G(x, y) = G(x,f(x))$$
+und ein Punkt $P_n = (x_n,y_n)$ des Graphen einer speziellen Lösung.\\\\
+Der Punkt $P_{n+1} = (x_{n+1}, y_{n+1})$ wird wie folgt bestimmt:\\
+Man wählt ein $\Delta{x}$ mit kleinem Betrag und berechnet
+$$x_{n+1} = x_n + \Delta x$$
+$$y_{n+1} = y_n + s_n\Delta x$$
+mit
+$$s_n = G(x_n,y_n)$$
+
+
+\subsection{Verfahren von Runge-Kutta}
+
+Gegeben sei eine explizite Differenzialgleichung 1. Ordnung für die Funktion $f$
+$$f'(x) = G(x, f(x))$$
+und ein Punkt $P_n = (x_n, y_n)$ des Graphen einer speziellen Lösung.\\\\
+Der Punkt $P_{n+1} = (x_{n+1},y_{n+1})$ wird wie folgt bestimmt:\\
+Man wählt ein $\Delta{x}$ mit kleinem Betrag. Die Abszisse von $P_{n+1}$ ist
+$$x_{n+1} = x_n + \Delta x$$
+Die Ordinate ist
+$$y_{n+1} = y_n + s\Delta x$$
+mit
+$$s = \frac{s_1 + 2s_2 + 2s_3 + s_4}{6}$$
+wobei
+\begin{enumerate}
+\item $\displaystyle s_1 = G(x_n, y_n)$
+\item $\displaystyle s_2 = G\left(x_n + \frac{\Delta{x}}{2}, y_n + s_1 \frac{\Delta x}{2}\right)$
+\item $\displaystyle s_3 = G\left(x_n + \frac{\Delta{x}}{2}, y_n + s_2 \frac{\Delta x}{2}\right)$
+\item $\displaystyle s_4 = G(x_n+\Delta x, y_n+s_3\Delta x)$
+\end{enumerate}
 
 
 \subsection{Linearität der Lösungen homogener lineare Differenzialgleichungen}
